@@ -22,6 +22,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.stream.JsonWriter;
 import com.ninjaguild.dragoneggdrop.commands.DragonEggDropCmd;
+import com.ninjaguild.dragoneggdrop.commands.DragonSpawnCmd;
 import com.ninjaguild.dragoneggdrop.commands.DragonTemplateCmd;
 import com.ninjaguild.dragoneggdrop.dragon.DragonTemplate;
 import com.ninjaguild.dragoneggdrop.events.DragonLifeListeners;
@@ -112,6 +113,7 @@ public class DragonEggDrop extends JavaPlugin {
 
 		// Register commands
 		this.registerCommand("dragoneggdrop", new DragonEggDropCmd(this));
+		this.registerCommand("dragonspawn", new DragonSpawnCmd(this));
 		this.registerCommand("dragontemplate", new DragonTemplateCmd(this));
 		
 		// Update check

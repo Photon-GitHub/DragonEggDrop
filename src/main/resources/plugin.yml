@@ -20,8 +20,13 @@ permissions:
     children:
       dragoneggdrop.help: true
       dragoneggdrop.reload: true
+      dragoneggdrop.spawn: true
       dragoneggdrop.template.*: true
-  
+
+  dragoneggdrop.spawn:
+    description: Allow access to the ender dragon spawn command
+    default: op
+
   dragoneggdrop.template.*:
     description: Allow access to the details of all loaded dragon templates
     default: op
