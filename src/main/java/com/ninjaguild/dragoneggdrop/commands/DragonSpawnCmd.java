@@ -65,8 +65,8 @@ public class DragonSpawnCmd implements CommandExecutor, TabCompleter
         }
 
         // Dragon respawn logic
-        if (!world.getPlayers().isEmpty() || plugin.getDEDManager().getWorldWrapper(world).isRespawnInProgress()
-            || world.getEntitiesByClass(EnderDragon.class).size() == 0)
+        if (plugin.getDEDManager().getWorldWrapper(world).isRespawnInProgress()
+            || !world.getEntitiesByClass(EnderDragon.class).isEmpty())
             return true;
 
         plugin.getDEDManager().getWorldWrapper(world).startRespawn(DEDManager.RespawnType.COMMAND);
